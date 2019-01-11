@@ -10,7 +10,11 @@ export class QuoteDetailsComponent implements OnInit {
 
   @Input() quote:Quotes;
 
-	
+	quotes = []
+
+  	addNewQuote(Quotes) {
+  		this.quotes.push(Quotes);
+  	}
 
   constructor() { }
 
