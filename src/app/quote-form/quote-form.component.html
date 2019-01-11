@@ -8,13 +8,23 @@
     Welcome to Quotes!</h1>
       <div class="input-group">
         <label for="name">Your Name: </label>
-        <input type="text"  placeholder="Your Name" [(ngModel)]="quotesdetails.personName" name="personName" required><br>
-        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input type="text"  placeholder="Your Name" [(ngModel)]="quotesdetails.personName" name="personName" #personName="ngModel" required><br>
+        <div [hidden]="personName.valid || personName.pristine" class="alert alert-danger">
+          <p> Name is Required</p>
+          
+      </div>
         <label for="author">Author: </label>
-        <input type="text"  placeholder="Author" [(ngModel)]="quotesdetails.authorName" name="authorName" required><br>
+        <input type="text"  placeholder="Author" [(ngModel)]="quotesdetails.authorName" name="authorName" #authorName="ngModel" required><br>
+        <div [hidden]="authorName.valid || authorName.pristine" class="alert alert-danger">
+          <p> Author is Required</p>
+          
+      </div>
         <label for="quote">Quote: </label>
         <textarea rows="4" cols="50"  placeholder="Type your quote here..." [(ngModel)]="quotesdetails.quoteName" name="quoteName" required></textarea><br><br>
-        
+        <div [hidden]="quoteName.valid || quoteName.pristine" class="alert alert-danger">
+          <p> Quote is Required</p>
+          
+      </div>
         <button class="btn btn-success" type="submit">Submit</button>
       </div>
 
@@ -25,11 +35,10 @@
       <p class="authorname"><span id="spanname">Author: </span> {{quotesdetails.authorName}}</p>
       <p>" {{quotesdetails.quoteName}} "</p>				
     </div><br>
+    </form>
     <footer align="center">
       <p>&copy; Licio Lentimo 2019.</p>
     </footer>
-
-  </form>
   </div>
 </div>
 </body>
