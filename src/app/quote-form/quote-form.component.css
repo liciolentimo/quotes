@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
+ @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 input[type=text],textarea{
     width: 100%;
@@ -26,4 +26,4 @@ button[type=submit] {
 
   label{
     font-family: 'Quicksand', sans-serif;
-  }
+  } 
