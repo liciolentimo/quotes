@@ -27,3 +27,14 @@ button[type=submit] {
   label{
     font-family: 'Quicksand', sans-serif;
   } 
+
+  .authorname{
+    margin-bottom: 0px;
+
+  }
+  #spanname{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    font-style: italic;
+  }

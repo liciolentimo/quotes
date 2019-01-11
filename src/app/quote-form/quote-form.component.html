@@ -1,21 +1,27 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <div class="container">
   <div class="row">
-  <form>
+  <form (ngSubmit)='submitQuote()' #quoteForm='ngForm' name="quoteForm">
     <div class="col-md-6">
       
       <div class="input-group">
         <label for="name">Your Name: </label>
-        <input type="text"  placeholder="Your Name" required><br>
+        <input type="text"  placeholder="Your Name" [(ngModel)]="quotesdetails.personName" name="personName" required><br>
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
         <label for="author">Author: </label>
-        <input type="text"  placeholder="Author" required><br>
+        <input type="text"  placeholder="Author" [(ngModel)]="quotesdetails.authorName" name="authorName" required><br>
         <label for="quote">Quote: </label>
-        <textarea rows="4" cols="50"  placeholder="Type your quote here..." required></textarea><br><br>
+        <textarea rows="4" cols="50"  placeholder="Type your quote here..." [(ngModel)]="quotesdetails.quoteName" name="quoteName" required></textarea><br><br>
         
         <button class="btn btn-success" type="submit">Submit</button>
       </div>
 
+    </div>
+
+    <div>
+      <p class="authorname"><span id="spanname">Name: </span> {{quotesdetails.personName}}</p>
+      <p class="authorname"><span id="spanname">Author: </span> {{quotesdetails.authorName}}</p>
+      <p>" {{quotesdetails.quoteName}} "</p>				
     </div>
 
   </form>
