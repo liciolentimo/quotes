@@ -9,7 +9,7 @@ import { Quotes } from '../quotes';
 })
 export class QuoteFormComponent implements OnInit {
 
-  quotesdetails=new Quotes('','','',new Date());
+  quotesdetails=new Quotes('','','',new Date(),0);
 
   personName:string;
   authorName:string;
@@ -20,9 +20,10 @@ export class QuoteFormComponent implements OnInit {
   @Output() addQuote = new EventEmitter();
 
 	submitQuote() {
-		this.newQuote =new Date();
-        this.quotesdetails = new Quotes(this.personName,this.quoteName,this.authorName,this.datePublished);
+		this.datePublished =new Date();
+        this.newQuote = new Quotes(this.personName,this.quoteName,this.authorName,this.datePublished,0);
         this.addQuote.emit(this.newQuote);
+        // console.log(this.quotesdetails);
     }
 
 

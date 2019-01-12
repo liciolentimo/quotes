@@ -1,15 +1,18 @@
-<div class="left">
- 
-  <div>
-    <div>
-      <div *ngFor='let quote of quotes;let i = index; let z = index;'>
-        <p>{{quotesdetails.quoteName</p>
-          <span>Name: {{quotesdetails.personName}}</span>
-          <p>{{quotesdetails.authorName</p>
-            <span>Name: {{quotesdetails.authorName}}</span>
-            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 
-      </div>
-    </div>
-  </div>
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+ <!-- <div class="col-md-1"></div> -->
+<app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+<!-- <div class="col-md-1"></div> -->
+<div class="col-md-5">
+	<div *ngFor='let quote of quotes;let i = index; let z = index;'>
+     <p>"{{quote.quoted}}" <br>
+      <span>Name - {{quote.personName}}, <br>Author - {{quote.authorName}}</span> <br> 
+      <span class="date">Uploaded {{quote.dateCreated|timePassed}} minutes ago.</span></p>
+		<a class="btn btn-danger-alt" (click) = 'dislike(i)'><strong>DISLIKE </strong><i class="fa fa-thumbs-down">
+
+    </i> </a><a class="btn btn-success-alt " (click) = 'like(z)'><strong>LIKE </strong><i class="fa fa-thumbs-up"></i></a>
+    <a class="btn btn-danger " (click) = 'deleteQuote(true)'>DELETE <i class="fa fa-trash"></i></a>
+		<p>No of Votes: <strong>{{quote.votes}}</strong><span class="label label-success" *ngIf='quote.votes > 5'>Voted Best</span></p>
+		<hr>
+	</div>
 </div>

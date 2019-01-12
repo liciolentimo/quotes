@@ -16,3 +16,7 @@ export class QuoteshownComponent implements OnInit {
   }
 
 }
+
+
+
+
