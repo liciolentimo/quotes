@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <body>
-<div class="container">
-  <div class="row">
+<!-- <div>
+  <div> -->
   <form (ngSubmit)='submitQuote()' #quoteForm='ngForm' name="quoteForm" novalidate>
    
       <h1 align="center">
@@ -26,7 +26,7 @@
           <p> Quote is Required</p>
           
       </div>
-        <button class="btn btn-success" type="submit">Submit</button>
+        <button [disabled]="!quoteForm.form.valid" class="btn btn-success" type="submit">Submit</button>
       </div>
 
     </div>
@@ -41,6 +41,6 @@
       <p>&copy; Licio Lentimo 2019.</p>
     </footer>
     </form>
-  </div>
-</div>
+  <!-- </div>
+</div> -->
 </body>
