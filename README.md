@@ -2,15 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
-##Prerequisites
+## Prerequisites
 * Requires Node.js version 8.x or 10.x.
 * `npm` package manager - To check that you have the npm client installed, run `npm -v` in a terminal/console window.
 * Install the Angular CLI globally - `npm install -g @angular/cli`.
 
-#Installation
+## Installation
 Clone the repo: `$ git clone https://github.com/liciolentimo/quotes.git`.
 
-#Github Pages
+## Github Pages
 This project is hosted on github pages: https://liciolentimo.github.io/quotes/
 
 
