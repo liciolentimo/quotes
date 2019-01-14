@@ -10,3 +10,6 @@ body{
     box-shadow: 0;
     display: inline;
     }
+    #details{
+      margin-left: 50px;
+    }

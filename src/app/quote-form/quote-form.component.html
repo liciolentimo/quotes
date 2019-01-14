@@ -9,19 +9,19 @@
     <div class="col-md-6">
       <div class="input-group">
         <label for="name">Your Name: </label>
-        <input type="text"  placeholder="Your Name" [(ngModel)]="quotesdetails.personName" name="personName" #personName="ngModel" required><br>
+        <input id="name" type="text"  placeholder="Your Name" [(ngModel)]="quotesdetails.personName" name="personName" #personName="ngModel" required><br>
         <div [hidden]="personName.valid || personName.pristine" class="alert alert-danger">
           <p> Name is Required</p>
           
       </div>
         <label for="author">Author: </label>
-        <input type="text"  placeholder="Author" [(ngModel)]="quotesdetails.authorName" name="authorName" #authorName="ngModel" required><br>
+        <input id="author" type="text"  placeholder="Author" [(ngModel)]="quotesdetails.authorName" name="authorName" #authorName="ngModel" required><br>
         <div [hidden]="authorName.valid || authorName.pristine" class="alert alert-danger">
           <p> Author is Required</p>
           
       </div>
         <label for="quote">Quote: </label>
-        <textarea rows="4" cols="50"  placeholder="Type your quote here..." [(ngModel)]="quotesdetails.quoteName" name="quoteName" #quoteName="ngModel" required></textarea><br><br>
+        <textarea id="textarea" rows="4" cols="50"  placeholder="Type your quote here..." [(ngModel)]="quotesdetails.quoteName" name="quoteName" #quoteName="ngModel" required></textarea><br><br>
         <div [hidden]="quoteName.valid || quoteName.pristine" class="alert alert-danger">
           <p> Quote is Required</p>
           
@@ -34,7 +34,7 @@
     <div>
       <p class="authorname"><span id="spanname">Name: </span> {{quotesdetails.personName}}</p>
       <p class="authorname"><span id="spanname">Author: </span> {{quotesdetails.authorName}}</p>
-      <p>" {{quotesdetails.quoteName}} "</p>				
+      <p id="quote">" {{quotesdetails.quoteName}} "</p>				
     </div><br>
     
     
