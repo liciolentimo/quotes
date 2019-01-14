@@ -4,7 +4,7 @@
   <body>
   <div>
     <div *ngFor='let quote of quotes;let i = index; let z = index;'>
-      <p>"{{quote.quoted}}" <br>
+      <p>"{{quote.quoteName}}" <br>
         <span>Name - {{quote.personName}} <br>Author - {{quote.authorName}}</span> <br> 
         <span class="date">Uploaded {{quote.dateCreated|timePassed}} minutes ago.</span></p>
       <a class="btn btn-danger" (click) = 'dislike(i)'>DISLIKE <i class="fa fa-thumbs-down">
@@ -12,6 +12,9 @@
       </i> </a><a class="btn btn-success " (click) = 'like(z)'>LIKE <i class="fa fa-thumbs-up"></i></a>
       <a class="btn btn-danger " (click) = 'deleteQuote(true)'>DELETE   <i class="fa fa-trash"></i></a>
       <p>No of Likes: {{quote.votes}}<span class="label label-success" *ngIf='quote.votes > 5'>Favourite Quote</span></p>
+    
+
+
       <hr>
 
        <!-- Facebook -->
