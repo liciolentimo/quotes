@@ -40,9 +40,11 @@
     }
     body{
       background-image: linear-gradient(#1F45FC, purple);
+      background-size: cover;
     }
     h1{
       color: white;
       font-family: 'Quicksand', sans-serif;
     }
+    
   
