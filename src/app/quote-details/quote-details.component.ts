@@ -27,13 +27,16 @@ export class QuoteDetailsComponent implements OnInit {
       }
   }
 
-  dislike(i) {
-    this.quotes[i].votes -=1;
-  }
+  dislikes:number=0; 
+    dislike(){
+      this.dislikes=this.dislikes+1;
+    }
+  
 
-  like(z){
-    this.quotes[z].votes +=1;
-  }
+    likes:number=0; 
+    like(){
+      this.likes=this.likes+1;
+    }
 
   constructor() { }
 
