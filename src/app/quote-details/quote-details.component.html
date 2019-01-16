@@ -4,6 +4,12 @@
   <body>
   <div id="details">
     <div *ngFor='let quote of quotes;let i = index; let z = index;'>
+        <!-- <div>
+            <p class="authorname"><span id="spanname">Name: </span> {{quotes.personName}}</p>
+            <p class="authorname"><span id="spanname">Author: </span> {{quote.authorName}}</p>
+            <p id="quote">" {{quote.quoteName}} "</p>				
+           -->
+          
       <p>"{{quote.quoteName}}" <br>
         <span>Name - {{quote.personName}} <br>Author - {{quote.authorName}}</span> <br> 
         <span class="date">Uploaded {{quote.dateCreated|timePassed}} minutes ago.</span></p>
@@ -32,6 +38,7 @@
 </a>
     </div>
   </div>
+  <!-- </div> -->
   
   
   </body>
