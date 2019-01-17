@@ -8,7 +8,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * Install the Angular CLI globally - `npm install -g @angular/cli`.
 
 ## Installation
-Clone the repo: `$ git clone https://github.com/liciolentimo/quotes.git`.
+* Clone the repo: `$ git clone https://github.com/liciolentimo/quotes.git`.
+* Run `ng serve` on the quotes folder and navigate to `http://localhost:4200/`.
+
+## About 
+This is an application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational. Enter your name, author of the quote and the quote and click on Submit. The quote details should appear at the bottom and you can like or dislike them. You also have the option to delete the quote.
 
 ## Github Pages
 This project is hosted on github pages: https://liciolentimo.github.io/quotes/
@@ -19,14 +23,6 @@ This project is hosted on github pages: https://liciolentimo.github.io/quotes/
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Author
 

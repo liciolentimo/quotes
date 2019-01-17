@@ -61,5 +61,8 @@
     #textarea{
       margin-left: 50px;
     }
-    
+    .aside{
+      float: right;
+      margin-right: 30px;
+    }
   
